@@ -1,0 +1,157 @@
+$AlmostWhite: hsl(0, 0%, 98%);
+$MediumGray: hsl(0, 0%, 41%);
+$AlmostBlack: hsl(0, 0%, 8%);
+
+.init.view {
+  .init-container {
+    display: flex;
+    overflow: hidden;
+    flex-direction: column-reverse;
+
+    .init-section {
+      flex: 1;
+
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      h2 {
+        margin: 5.8rem 1.8rem 1.8rem;
+        color: $AlmostBlack;
+        font-size: 3.6rem;
+        text-align: center;
+
+        br {
+        display: none;
+        }
+      }
+      p {
+        padding: 0 1.8rem;
+
+        font-size: 1.8rem;
+        line-height: 3.2rem;
+        text-align: center;
+      }
+      button {
+        margin-top: 3.2rem;
+        padding: 1.8rem 2rem;
+        background: $AlmostBlack;
+        border: .1rem solid transparent;
+        border-radius: 1.4rem;
+        cursor: pointer;
+
+        color: $AlmostWhite;
+        font-size: 1.8rem;
+        font-weight: 700;
+
+        transition: .2s ease;
+
+        &:hover {
+          border: .1rem solid $AlmostBlack;
+          background: none;
+          color: $AlmostBlack;
+        }
+      }
+
+      .advertising {
+        margin: 5.8rem 0 3.2rem;
+        width: 100%;
+        padding: 0 1.8rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        img {
+          width: 20%;
+          display: inline-block;
+
+          object-fit: cover;
+
+          &:nth-child(2) {
+            width: 15%;
+          }
+        }
+      }
+
+      & > img {
+        width: 100%;
+      }
+    }
+  }
+
+  @media screen and (min-width: 992px) {
+    height: 100vh;
+    padding: 8% 8%;
+
+    .init-container {
+      height: 100%;
+      overflow: hidden;
+
+      flex-direction: row;
+      justify-content: space-between;
+
+      .init-section {
+        flex: none;
+        width: 42%;
+        height: 100%;
+
+        display: flex;
+        position: relative;
+        justify-content: flex-start;
+
+        &:last-child {
+          width: auto;
+          align-self: flex-end;
+
+          img {
+            height: 100%;
+          }
+        }
+
+        h2 {
+          width: 100%;
+          margin: 12rem 0 3.2rem;
+          font-size: 8rem;
+          text-align: left;
+
+          br {
+            display: block;
+          }
+        }
+
+        p {
+          width: 70%;
+          padding: 0;
+          text-align: left;
+        }
+
+        .space {
+          width: 100%;
+        }
+
+        button {
+          padding: 1rem 2rem;
+        }
+
+        .advertising {
+          margin: 0;
+          margin-top: 4rem;
+
+          img {
+            width: 18%;
+
+            &:nth-child(2) {
+              width: 12%;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    padding: 8% 10%;
+  }
+  @media screen and (min-width: 1400px) {
+    padding: 8% 12%;
+  }
+}
