@@ -1,18 +1,12 @@
 import './init.style.scss'
 
+import Header from '../../components/Header/Header.component'
+
 const Init = () => {
   // * return
   return (
-    <div className='init view'>
-      <h1>Init</h1>
-
-      Features
-      Company
-      Careers
-      About
-
-      Login
-      Register
+    <section className='init view'>
+      <Header />
 
       Make remote work
 
@@ -25,7 +19,7 @@ const Init = () => {
         Challenge by <a href='https://www.frontendmentor.io?ref=challenge' target='_blank'>Frontend Mentor</a>. 
         Coded by <a href='#'>Your Name Here</a>.
       </div>
-    </div>
+    </section>
   )
 }
 
